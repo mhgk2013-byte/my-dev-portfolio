@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HOMAX — محمد حسین گل محمدی</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --bg:#03070d;
+  --panel:#08111b;
+  --line:#163047;
+  --text:#eaf3ff;
+  --muted:#8ea4ba;
+  --cyan:#16c8ff;
+  --cyan2:#38e6ff;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 50% 0,#0a1a2a 0,#03070d 42%,#010308 100%);
+  color:var(--text);
+  font-family:Vazirmatn,system-ui,sans-serif;
+  overflow-x:hidden;
+}
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(22,200,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(22,200,255,.035) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:linear-gradient(#000,transparent 78%);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.wrap{
+  width:min(calc(100% - 36px),1180px);
+  margin:auto;
+}
+
+.nav{
+  position:fixed;
+  top:18px;
+  left:0;
+  right:0;
+  z-index:30;
+}
+
+.navin{
+  height:68px;
+  border:1px solid rgba(91,171,220,.18);
+  background:rgba(3,9,15,.72);
+  backdrop-filter:blur(18px);
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 18px;
+  box-shadow:0 18px 50px rgba(0,0,0,.35);
+}
+
+.brand{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  letter-spacing:.12em;
+  font-size:20px;
+}
+
+.brand span{
+  color:var(--cyan);
+}
+
+.links{
+  display:flex;
+  gap:24px;
+  font-size:14px;
+  color:#a8bdd0;
+}
+
+.links a:hover{
+  color:#fff;
+}
+
+.hero{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  padding:120px 0 70px;
+  position:relative;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:720px;
+  height:720px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(22,200,255,.09),transparent 65%);
+  top:90px;
+  left:50%;
+  transform:translateX(-50%);
+  filter:blur(10px);
+  z-index:-1;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:54px;
+  align-items:center;
+}
+
+.hero-copy{
+  text-align:right;
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:1px solid rgba(22,200,255,.22);
+  background:rgba(22,200,255,.05);
+  padding:8px 13px;
+  border-radius:999px;
+  color:#a9dff4;
+  font-size:13px;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 14px var(--cyan);
+}
+
+h1{
+  font-family:'Space Grotesk',Vazirmatn,sans-serif;
+  font-size:clamp(62px,9vw,110px);
+  line-height:.95;
+  margin:22px 0 8px;
+  letter-spacing:.08em;
+}
+
+h1 span{
+  color:var(--cyan);
+  text-shadow:0 0 30px rgba(22,200,255,.28);
+}
+
+.sub{
+  font-size:20px;
+  font-weight:700;
+  margin:0 0 16px;
+}
+
+.lead{
+  max-width:620px;
+  color:var(--muted);
+  line-height:2;
+  font-size:16px;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 18px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#07121d;
+  font-weight:600;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  border-color:var(--cyan);
+}
+
+.btn.primary{
+  background:linear-gradient(135deg,#12b8ea,#0f7eac);
+  border-color:transparent;
+  box-shadow:0 10px 28px rgba(13,171,220,.2);
+}
+
+.logo{
+  width:min(440px,80vw);
+  aspect-ratio:1;
+  margin:auto;
+  border-radius:36px;
+  border:1px solid rgba(79,162,218,.2);
+  background:
+    radial-gradient(circle at center,rgba(22,200,255,.10),transparent 55%),
+    linear-gradient(145deg,rgba(12,26,40,.92),rgba(4,10,17,.82));
+  display:grid;
+  place-items:center;
+  box-shadow:
+    inset 0 0 40px rgba(22,200,255,.04),
+    0 35px 100px rgba(0,0,0,.5);
+  position:relative;
+  overflow:hidden;
+}
+
+.logo:before{
+  content:"";
+  position:absolute;
+  inset:12%;
+  border:1px solid rgba(22,200,255,.16);
+  border-radius:28px;
+}
+
+.logo:after{
+  content:"";
+  width:58%;
+  height:58%;
+  border:1px solid rgba(22,200,255,.22);
+  border-radius:50%;
+  box-shadow:
+    0 0 35px rgba(22,200,255,.10),
+    inset 0 0 25px rgba(22,200,255,.08);
+}
+
+.logo-text{
+  position:absolute;
+  z-index:2;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(65px,9vw,105px);
+  font-weight:700;
+  letter-spacing:.08em;
+  text-shadow:0 0 28px rgba(22,200,255,.25);
+}
+
+.logo-text span{
+  color:var(--cyan);
+}
+
+.section{
+  padding:105px 0;
+}
+
+.section-head{
+  margin-bottom:28px;
+}
+
+.kicker{
+  font-size:12px;
+  letter-spacing:.22em;
+  color:var(--cyan);
+  text-transform:uppercase;
+}
+
+.section h2{
+  margin:7px 0 0;
+  font-size:34px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.card{
+  background:linear-gradient(180deg,rgba(9,20,31,.92),rgba(4,10,16,.92));
+  border:1px solid rgba(81,154,201,.16);
+  border-radius:20px;
+  padding:22px;
+  min-height:190px;
+}
+
+.card h3{
+  margin:8px 0 10px;
+  font-size:19px;
+}
+
+.card p{
+  color:var(--muted);
+  line-height:1.9;
+  margin:0;
+}
+
+.empty{
+  grid-column:1/-1;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  min-height:280px;
+  border-style:dashed;
+}
+
+.empty strong{
+  font-size:20px;
+}
+
+.empty span{
+  display:block;
+  color:var(--muted);
+  margin-top:8px;
+}
+
+.stack{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.pill{
+  padding:9px 14px;
+  border:1px solid rgba(81,154,201,.2);
+  border-radius:999px;
+  background:#07111b;
+  color:#b9d3e7;
+  font-size:13px;
+}
+
+.footer{
+  padding:60px 0 80px;
+  border-top:1px solid rgba(81,154,201,.12);
+  color:#7f97ab;
+}
+
+.footer-in{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.scan{
+  position:absolute;
+  left:0;
+  right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+  opacity:.3;
+  animation:scan 6s linear infinite;
+}
+
+@keyframes scan{
+  0%{top:18%;opacity:0}
+  20%{opacity:.35}
+  90%{opacity:.12}
+  100%{top:90%;opacity:0}
+}
+
+@media(max-width:900px){
+  .links{display:none}
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-copy{
+    text-align:center;
+    order:2;
+  }
+
+  .hero-logo{
+    order:1;
+  }
+
+  .lead{
+    margin-inline:auto;
+  }
+
+  .actions{
+    justify-content:center;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .logo{
+    width:min(340px,82vw);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="scan"></div>
+
+<header class="nav">
+  <div class="wrap navin">
+    <a class="brand" href="#top">HOMA<span>X</span></a>
+
+    <nav class="links">
+      <a href="#about">درباره من</a>
+      <a href="#projects">پروژه‌ها</a>
+      <a href="#stack">تکنولوژی‌ها</a>
+      <a href="#contact">ارتباط</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+
+      <span class="eyebrow">
+        <span class="dot"></span>
+        PERSONAL DEVELOPER PORTFOLIO
+      </span>
+
+      <h1>HOMA<span>X</span></h1>
+
+      <p class="sub">محمد حسین گل محمدی</p>
+
+      <p class="lead">
+        اینجا فضای شخصی من برای ساختن، یادگرفتن و تبدیل ایده‌ها
+        به پروژه‌های واقعی است؛ با تمرکز روی کدنویسی،
+        وب، اپ و تجربه‌های تکنولوژیک.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="#projects">مشاهده پروژه‌ها</a>
+        <a class="btn" href="#contact">ارتباط با من</a>
+      </div>
+
+    </div>
+
+    <div class="hero-logo">
+      <div class="logo">
+        <div class="logo-text">HOMA<span>X</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="kicker">ABOUT</div>
+      <h2>درباره HOMAX</h2>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="kicker">01</div>
+        <h3>هویت شخصی</h3>
+        <p>
+          یک پرتفولیوی اختصاصی برای معرفی مسیر یادگیری،
+          ساخت پروژه‌ها و رشد حرفه‌ای.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="kicker">02</div>
+        <h3>ساختن واقعی</h3>
+        <p>
+          پروژه‌ها قرار است واقعی باشند؛ بدون نمونه‌سازی
+          ساختگی یا نمایش چیزهایی که ساخته نشده‌اند.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="kicker">03</div>
+        <h3>آینده‌محور</h3>
+        <p>
+          طراحی بصری سایت با الهام از رابط‌های مدرن
+          تکنولوژی، کدنویسی و فضای آینده‌نگر.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="kicker">PROJECTS</div>
+      <h2>پروژه‌های من</h2>
+    </div>
+
+    <div class="grid">
+
+      <article class="card empty">
+        <div>
+          <strong>هنوز پروژه‌ای اضافه نشده</strong>
+          <span>
+            پروژه‌های واقعی خودت را به این بخش اضافه می‌کنیم.
+          </span>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="stack">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="kicker">STACK</div>
+      <h2>تکنولوژی‌ها</h2>
+    </div>
+
+    <div class="stack">
+      <span class="pill">HTML</span>
+      <span class="pill">CSS</span>
+      <span class="pill">JavaScript</span>
+      <span class="pill">Python</span>
+      <span class="pill">Android</span>
+      <span class="pill">GitHub</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+
+    <div class="card">
+
+      <div class="kicker">CONTACT</div>
+
+      <h2>ارتباط</h2>
+
+      <p>
+        برای همکاری، پروژه یا معرفی کارها،
+        راه ارتباطی خودت را بعداً اینجا قرار می‌دهیم.
+      </p>
+
+      <br>
+
+      <a
+        class="btn primary"
+        href="https://github.com/mhgk2013-byte"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub من
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>HOMAX © 2026</span>
+    <span>DEVELOPER • CREATOR • BUILDER</span>
+  </div>
+</footer>
+
+</body>
+</html>
