@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mhgk2013-byte.github.io/my-dev-portfolio/sitemap.xml
