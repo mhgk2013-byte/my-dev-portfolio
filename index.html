@@ -55,6 +55,57 @@ section{scroll-margin-top:104px}
   .brand span{display:none}
   .links{justify-content:flex-start}
 }
+  @media(max-width:600px){
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.wrap{
+    width:100%;
+    max-width:100%;
+    padding-left:16px;
+    padding-right:16px;
+}
+
+section{
+    width:100%;
+}
+
+.hero-grid,
+.project-top,
+.stats,
+.cards,
+.grid{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+
+.card,
+.project-shell,
+.panel{
+    width:100%;
+    max-width:100%;
+}
+
+h1,h2{
+    word-break:break-word;
+}
+
+nav{
+    width:calc(100% - 32px);
+    left:16px;
+    right:16px;
+}
+
+.links{
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+}
 </style></head><body>
 <header class="nav"><div class="wrap navin"><a class="brand" href="#top"><img src="" data-logo alt="HOMAX"><span>HOMA<b>X</b></span></a><nav class="links"><a href="#about"><span class="i18n" data-fa="درباره من" data-en="About">درباره من</span></a><a href="#journey"><span class="i18n" data-fa="مسیر" data-en="Journey">مسیر</span></a><a href="#stack"><span class="i18n" data-fa="تکنولوژی" data-en="Tech Stack">تکنولوژی</span></a><a href="#projects"><span class="i18n" data-fa="پروژه‌ها" data-en="Projects">پروژه‌ها</span></a><a href="#slash"><span class="i18n" data-fa="/" data-en="/">/</span></a><a href="#contact"><span class="i18n" data-fa="ارتباط" data-en="Contact">ارتباط</span></a></nav><a class="cta" href="#projects"><span class="i18n" data-fa="مشاهده پروژه‌ها" data-en="View Projects">مشاهده پروژه‌ها</span></a><button class="lang-toggle" id="langToggle" type="button" aria-label="Change language">EN</button></div></header>
 <main id="top"><section class="hero"><div class="wrap hero-grid"><div class="hero-copy reveal"><span class="eyebrow"><span class="dot"></span><span class="i18n" data-fa="پورتفولیوی شخصی برنامه‌نویس" data-en="PERSONAL DEVELOPER PORTFOLIO">پورتفولیوی شخصی برنامه‌نویس</span></span><h1>HOMA<span>X</span></h1><div class="name"><span id="heroName" class="i18n" data-fa="محمد حسین گل محمدی" data-en="Muhammad Hossein Golmohammadi">محمد حسین گل محمدی</span></div><div class="role"><span class="i18n" data-fa="توسعه‌دهنده • سازنده • خالق" data-en="DEVELOPER • CREATOR • BUILDER">توسعه‌دهنده • سازنده • خالق</span></div><p class="lead"><span class="i18n" data-fa="اینجا فضای شخصی من برای ساختن، یادگرفتن و تبدیل ایده‌های خام به پروژه‌های واقعی است؛ جایی که مسیر رشد، تجربه‌ها و کارهای واقعی من کنار هم قرار می‌گیرند." data-en="This is my personal space for building, learning, and turning raw ideas into real projects—where growth, experience, and real work come together.">اینجا فضای شخصی من برای ساختن، یادگرفتن و تبدیل ایده‌های خام به پروژه‌های واقعی است؛ جایی که مسیر رشد، تجربه‌ها و کارهای واقعی من کنار هم قرار می‌گیرند.</span></p><div class="actions"><a class="btn primary" href="#projects"><span class="i18n" data-fa="ورود به پروژه‌ها ↘" data-en="Explore Projects ↘">ورود به پروژه‌ها ↘</span></a><a class="btn" href="#about"><span class="i18n" data-fa="کشف HOMAX" data-en="Discover HOMAX">کشف HOMAX</span></a></div></div><div class="hero-art reveal"><div class="logo-frame"><img class="logo-img" src="" data-logo alt="لوگوی HOMAX"><div class="hud"><span class="tl">SYS // HOMAX</span><span class="tr">ONLINE</span><span class="bl">CORE / 01</span><span class="br">BUILD • CREATE</span></div></div></div></div></section>
